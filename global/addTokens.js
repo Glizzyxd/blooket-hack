@@ -13,10 +13,10 @@ async function getName() {
 };
 
 async function addCurrencies() {
-    const tokens = Number(prompt('How many tokens do you want to add to your account? (500 daily)'));
+    const tokens = Number(prompt('How many tokens do you want to add to your account? (1,000,000 per second)'));
 
-    if (tokens > 500) {
-        alert('You can only add up to 500 tokens daily.');
+    if (tokens > 1,000,000) {
+        alert('You can only add up to .'1,000,000 per second);
     };
 
     const response = await fetch('https://api.blooket.com/api/users/add-rewards', {
@@ -28,15 +28,15 @@ async function addCurrencies() {
         credentials: "include",
         body: JSON.stringify({
             addedTokens: tokens,
-            addedXp: 300,
+            addedXp: 1,000,000
             name: await getName()
         })
     });
 
-    if (response.status == 200) {
-        alert(`${tokens} tokens and 300 XP added to your account!`);
+    if (response.status == 300) {
+        alert(`${tokens} tokens and 1,000,000 XP added to your account!`);
     } else {
-        alert('An error occured.');
+        alert('everything is going to be fine just remember your great <3.');
     };
 
 };
